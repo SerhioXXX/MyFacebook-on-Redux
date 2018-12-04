@@ -5,7 +5,7 @@ import photo3 from '../../../theme/assets/photos/3.jpeg';
 import photo4 from '../../../theme/assets/photos/4.jpeg';
 
 // Types
-import { SHOW_NEXT_PHOTO, SHOW_SELECTED_PHOTO } from './types';
+import { SHOW_NEXT_PHOTO, SHOW_SELECTED_PHOTO, SHOW_PREVIOUS_PHOTO } from './types';
 
 const initialState = {
     photos: [
@@ -28,6 +28,17 @@ export const galleryReducer = (state = initialState, action) => {
                 ...state,
                 selectedPhotoIndex: state.selectedPhotoIndex + 1,
             };
+
+        case SHOW_PREVIOUS_PHOTO:
+            if (state.selectedPhotoIndex === 0) {
+                return state;
+            }
+
+            return {
+                ...state,
+                selectedPhotoIndex: state.selectedPhotoIndex - 1,
+            };
+
         case SHOW_SELECTED_PHOTO:
             return {
                 ...state,
