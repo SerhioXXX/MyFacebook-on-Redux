@@ -18,7 +18,7 @@ export const api = {
                     'x-no-auth':    groupId,
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ comment: `${comment}` }),
+                body: JSON.stringify({ comment }),
             });
         },
     },
