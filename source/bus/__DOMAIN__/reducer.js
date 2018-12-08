@@ -1,7 +1,7 @@
 //Types
 import { types } from './types';
 
-initialState = {};
+const initialState = {};
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {

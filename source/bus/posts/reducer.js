@@ -10,8 +10,10 @@ export const postsReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.FILL_POSTS:
             return fromJS(action.payload);
+
         case types.CREATE_POSTS:
             return state.unshift(fromJS(action.payload));
+
         default:
             return state;
     }
