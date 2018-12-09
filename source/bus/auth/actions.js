@@ -16,5 +16,11 @@ export const authActions = {
             payload: userData,
         };
     },
+    loginAsync: (credentials) => {
+        return {
+            type:    types.LOGIN_ASYNC,
+            payload: credentials,
+        };
+    },
 }
 ;
