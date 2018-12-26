@@ -13,7 +13,7 @@ export function* fetchUsers () {
         const response = yield apply(api, api.users.fetch);
         const { data: users, message } = yield apply(response, response.json);
 
-        //console.log(users);
+        //console.log('--------->workers users', users);
 
         if (response.status !== 200) {
             throw new Error(message);
