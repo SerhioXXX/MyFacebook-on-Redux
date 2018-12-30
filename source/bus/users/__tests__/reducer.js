@@ -14,9 +14,9 @@ describe('users reducer', () => {
         expect(usersReducer(void 0, {})).toEqual(initialState);
     });
     test('should handle FILL_USERS action', () => {
-        expect(usersReducer(initialState, usersActions.fillUsers(__.usersList))).toEqual(fromJS(__.usersList));
+        expect(usersReducer(void 0, usersActions.fillUsers(__.usersList))).toEqual(fromJS(__.usersList));
     });
     test('should handle CLEAR_USERS action', () => {
-        expect(usersReducer(initialState.set(__.usersList), usersActions.clearUsers())).toEqual(initialState);
+        expect(usersReducer(void 0, usersActions.clearUsers())).toEqual(initialState.clear());
     });
 });
