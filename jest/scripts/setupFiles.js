@@ -39,6 +39,10 @@ const responseDataSuccess = {
     data:    userProfile,
     message: successMesasge,
 };
+const responseUsersDataSuccess = {
+    data:    usersList,
+    message: successMesasge,
+};
 
 const responseDataFail = {
     message: errorMessage,
@@ -89,6 +93,7 @@ global.__ = {
     newName,
     newAvatar,
     newPassword,
+    responseUsersDataSuccess,
 };
 global.fetch = fetch;
 global.localStorage = new LocalStorage();
